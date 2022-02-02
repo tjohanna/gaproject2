@@ -1,0 +1,11 @@
+.flex-container {
+    width: 80vw;
+    height: 70vw;
+    margin: 50px auto;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #ddd,
+                -1px -1px 10px #ddd,
+                1px -1px 10px #ddd,
+                -1px 1px 10px #ddd;
+}

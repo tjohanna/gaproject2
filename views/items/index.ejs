@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color: rgba(224, 224, 224, 0.31)
+
+        }
+
+         .flex-container {
+          /* width: 80vw; */
+          /* opacity: 0.7; */
+          background: url("https://i.ibb.co/1Lh559G/new-background.jpg") ;   
+          background-size: cover ;
+          /* opacity:0.8; */
+          width: 70%;
+          height: 60vw;
+          margin: 50px auto;
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          align-content: center;
+          border-radius: 10px;
+          box-shadow: 1px 1px 10px #ddd,
+                      -1px -1px 10px #ddd,
+                      1px -1px 10px #ddd,
+                      -1px 1px 10px #ddd;
+      }
+      .todo{
+        font-weight: bold;
+        font-size: 30px;
+        color: red ;
+        border-radius: 10px;
+      }
+      .text{
+        font-weight: bold;
+        font-size: 40px;
+        color: white ;
+        border-radius: 10px;
+      }
+      .bottom{
+        font-weight: bold;
+        font-size: 30px;
+        color: yellow ;
+        border-radius: 10px;
+      }
+      .flex-item1 {
+
+        padding: 9%;
+        background-color: rgba(224, 224, 224, 0.31);
+        width:70%;
+      }
+        
+    </style>
+
+
+<%- include("../partials/head.ejs") %>
+</head>
+<body>
+    <%- include("../partials/header.ejs") %>
+    
+    <main>
+
+        <div class="flex-container">
+
+
+    <div class="flex-item1">
+            <% for (item of items) { %>
+            
+            <article class="text">
+                <a href="/items/<%= item._id %>"> 
+                    <h2 class="todo">
+                        Activity: <%= item.name %>
+                    </h2>
+                </a>
+            </article>
+            <% } %>
+
+            <% if (items.length <= 0) {%>
+                <p class="text">No saved items, go add more!</p>
+                <a href="/user/hello"><button>View Ideas</button></a>
+            <% } else {%>
+                <p class="bottom">Keeping adding more!</p>
+            <%}%>
+
+
+    <div class="actions">
+            <a href="/items/new"><button>Create a new todo</button></a><br>
+
+            <a href="/user/logout"><button>Logout</button></a>
+</div>
+</div>
+
+        </div>
+
+
+    </main>
+
+
+</body>
+</html>

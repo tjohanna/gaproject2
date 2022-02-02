@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<style>
+  body {
+      background-image: url("https://i.ibb.co/nrw7FfD/background-image.webp");
+  }
+.flex-container {
+    background: rgba(0,0,0,0.6) ;   
+    width: 50%;
+    height: 40vw;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #ddd,
+                -1px -1px 10px #ddd,
+                1px -1px 10px #ddd,
+                -1px 1px 10px #ddd;
+}
+
+.flex-items {
+  padding: 15%;
+  /* background-color: black; */
+
+}
+
+p {
+  font-weight: bold;
+  font-size: 23px;
+  color: white;
+}
+
+input {
+  color: white;
+}
+
+button {
+  background-color:purple;
+  text-align: center;
+
+}
+
+</style>
+  </head>
+  <%- include("./partials/head.ejs") %>
+
+  <body>
+    <%- include("./partials/header.ejs") %>
+    <main>
+      <div class="flex-container">
+       
+        <div class="flex-items">
+        <p>Explore the many things the city has to offer and create a todo list to keep track. Sign Up to get started! </p>
+          </div>
+
+        <div>
+        <a href="/user/signup"><button>Signup</button></a>
+        <a href="/user/login"><button>Login</button></a>
+        </div>
+
+      </div>
+
+    </main>
+  </body>
+</html>

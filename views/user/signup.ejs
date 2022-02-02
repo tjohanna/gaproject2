@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body {
+                background-image: url("https://i.ibb.co/nrw7FfD/background-image.webp");
+          
+            }
+          .flex-container {
+              background: rgba(0,0,0,0.6) ;   
+              width: 50%;
+              height: 40vw;
+              margin: 50px auto;
+              display: flex;
+              justify-content: space-around;
+              flex-wrap: wrap;
+              align-content: center;
+              border-radius: 10px;
+              box-shadow: 1px 1px 10px #ddd,
+                          -1px -1px 10px #ddd,
+                          1px -1px 10px #ddd,
+                          -1px 1px 10px #ddd;
+          }
+          
+          .flex-items {
+            padding: 15%;          
+          }
+          
+          .label {
+            font-weight: bold;
+            font-size: 20px;
+            color: white;
+          }
+
+        .legend {
+            font-weight: bold;
+            font-size: 28px;
+            color: yellow;
+        }
+        input {
+          color: white;
+          font-weight: bold;
+
+      }
+          
+          button {
+            background-color:purple;
+            text-align: center;
+          
+          }
+          
+          </style>
+    </head>
+
+<%- include("../partials/head.ejs") %>
+<body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+
+        <div class="flex-container">
+            <form action="/user/signup" method="post">
+            <fieldset>
+                <legend class="legend">New User</legend>
+
+                <label class="label">Username: <input type="text" name="username" required></label>
+
+                <label class="label">Password: <input type="password" name="password" required> </label>
+
+                <input type="submit" value="Create Account">
+            </fieldset>
+            
+            </form>
+
+        </div>
+    </main>
+
+
+</body>
+</html>

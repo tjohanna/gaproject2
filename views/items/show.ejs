@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+          background-color: rgba(224, 224, 224, 0.31)
+
+      }
+
+       .flex-container {
+        background: url("https://i.ibb.co/c83YkqJ/Winter-in-Manhattan.jpg") ;   
+        background-size: cover ;
+        width: 70%;
+        height: 60vw;
+        margin: 50px auto;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-content: center;
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px #ddd,
+                    -1px -1px 10px #ddd,
+                    1px -1px 10px #ddd,
+                    -1px 1px 10px #ddd;
+    }
+
+    .label {
+            font-weight: bold;
+            font-size: 20px;
+            color: black;
+          }
+
+        .text {
+            font-weight: bold;
+            font-size: 25px;
+            color: black;
+        }
+        input {
+          color: black;
+          font-weight: bold;
+
+      }
+          
+          button {
+            background-color:purple;
+            text-align: center;
+          
+          }
+  
+    .flex-item1 {
+      /* background-color: white;
+      opacity: 0.3; */
+      padding: 15%;
+      background-color: rgba(224, 224, 224, 0.31);
+
+    
+    }
+      
+  </style>
+  </head>
+<%- include("../partials/head.ejs") %>
+
+<body>
+  <%- include("../partials/header.ejs") %>
+  <main>
+    <div class="flex-container">
+      <div class="flex-item1">
+      <article>
+        <h2 class="text">
+         Activity: <%= item.name %> 
+        </h2>
+        <h3 class="text">Location: <%= item.color %></h3>
+          <a href="/items/<%= item._id %>/edit"><button>Edit</button></a>
+          <form
+            action="/items/<%= item._id %>?_method=DELETE "
+            method="post"
+          >
+            <input type="submit" value="Delete" />
+          </form>
+
+        </div>
+        </div>
+      </article>
+    </div>
+  </main>
+</body>
+</html>

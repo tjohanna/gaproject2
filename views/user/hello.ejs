@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body {
+                background-image: url("https://i.ibb.co/KGcHp8Q/hello-page.jpg");
+                background-size: 100% 100%;
+            }
+       .flex-container {
+        /* width: 80vw; */
+        width: 60%;
+        height: 60vw;
+        margin: 50px auto;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-content: center;
+        /* border-radius: 10px; */
+        /* box-shadow: 1px 1px 10px #ddd,
+                    -1px -1px 10px #ddd,
+                    1px -1px 10px #ddd,
+                    -1px 1px 10px #ddd; */
+       }
+
+       .flex-item1 {
+    padding: 15%;
+    background-color: rgba(224, 224, 224, 0.31);
+    width: 100%;
+       }
+
+       .title {
+        text-align: center;
+        color: yellow;
+        font-weight: bold;
+    }
+       button {
+           float: right;
+       }
+
+       p {
+           color: yellow;
+           font-weight: bold;
+           font-size: 20px;
+       }
+        </style>
+    </head>
+
+<%- include("../partials/head.ejs") %>
+
+<body>
+    <%- include("../partials/header.ejs") %>
+    
+    <main>
+
+        <div class="title">
+        <h1>Ideas Page</h1>
+    </div>
+           
+<div class="flex-container">
+                <div class="flex-item1">
+
+                        <div class="box-1">
+            <p>Christmas Spectacular Starring The Radio City Rockettes</p>
+            <img src="https://i.ibb.co/4p7Kk7B/rockettes.jpg" alt="rockettes" width=200px border-radius=10px>
+            <a href="/user/buddy"><button>LIKE</button></a>
+
+                        </div>
+<br>
+                        <div class="box-2">
+                            <p>Ice Skating at Rockefeller Center</p>
+            <img src="https://i.ibb.co/1KXW1p0/Iceskating.jpg" alt="Iceskating" width=200px border-radius=10px>
+            <a href="/user/buddy"><button>LIKE</button></a>
+
+                        </div>
+<br>
+                        <div class="box-3">
+            <p>See house decorations at Dyker Heights</p>
+            <img src="https://i.ibb.co/RYRKSfD/Dykerheights.jpg" alt="Dykerheights" width=200px border-radius=10px>
+            <a href="/user/buddy"><button>LIKE</button></a>
+
+                        </div>
+   
+
+          
+                  </div> 
+                  </div>
+                
+                
+  <a href="/items"><button>BACK</button></a>           
+
+    </main>
+
+
+</body>
+</html>

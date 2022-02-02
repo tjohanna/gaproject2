@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+          background-color: rgba(224, 224, 224, 0.31)
+ 
+      }
+
+       .flex-container {
+        background: url("https://i.ibb.co/c83YkqJ/Winter-in-Manhattan.jpg") ;   
+        background-size: cover ;
+        /* opacity:0.8; */
+        width: 70%;
+        height: 60vw;
+        margin: 50px auto;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-content: center;
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px #ddd,
+                    -1px -1px 10px #ddd,
+                    1px -1px 10px #ddd,
+                    -1px 1px 10px #ddd;
+    }
+
+    .label {
+            font-weight: bold;
+            font-size: 20px;
+            color: black;
+          }
+
+        .legend {
+            font-weight: bold;
+            font-size: 28px;
+            color: yellow;
+        }
+        input {
+          color: black;
+          font-weight: bold;
+
+      }
+          
+          button {
+            background-color:purple;
+            text-align: center;
+          
+          }
+  
+    .flex-item1 {
+      padding: 15%;
+      background-color: rgba(224, 224, 224, 0.31);
+
+    
+    }
+      
+  </style>
+  </head>
+  <%- include("../partials/head.ejs") %>
+
+  <body>
+    <%- include("../partials/header.ejs") %>
+
+    <main>
+      <div class="flex-container">
+        <div class="flex-item1">
+          <form action="/items" method="post">
+        <fieldset>
+            <legend class="legend">CREATE A NEW TODO</legend>
+            <label class="label">Activity: 
+                <input 
+                type="text" 
+                name="name" 
+                placeholder="" 
+                />
+            </label>
+            <label class="label">
+                Location:
+                <input 
+                type="text"
+                name="color"
+                placeholder=""
+                />
+            </label>
+
+            <input type="submit" value="CREATE NEW TODO" />
+        </fieldset>
+        
+        </form>
+     
+    </div>
+    
+    
+    </div>
+    </main>
+  </body>
+</html>
