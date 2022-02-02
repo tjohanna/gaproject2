@@ -1,6 +1,20 @@
 # gaproject2
 ## Christmas in New York
 
+Heroku Link : https://gaproject2jt.herokuapp.com/items 
+
+###### Add/Edit/ Ideas
+* HTML
+* CSS
+* JavaScript
+* MongoDB
+* expressJS
+* Mongoose
+* EJS
+* Heroku
+* npm, bcrypt, nodemon, dotenv, method-override
+
+
 ###### An app that let's you create a todo list of activites. Find some inspirations and 'Like' to save.
 
 ###### Intro Page
