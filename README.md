@@ -3,7 +3,8 @@
 
 Heroku Link : https://gaproject2jt.herokuapp.com/items 
 
-###### Add/Edit/ Ideas
+###### Technologies used 
+
 * HTML
 * CSS
 * JavaScript
