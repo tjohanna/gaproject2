@@ -25,7 +25,7 @@ app.use(express.urlencoded({extended: true})) // parse request body
 app.use(express.static("public")) // serve files statically from public folder
 app.use(session({
     secret: process.env.SECRET,
-    store: MongoStore.create({mongoUrl: process.env.DATABASE_URL}),
+    store: MongoStore.create({mongoUrl: process.env.MONGODB_URI}),
     saveUninitialized: true,
     resave: false
 }))
