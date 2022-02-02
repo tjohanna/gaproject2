@@ -27,7 +27,8 @@ app.use(express.static("public")) // serve files statically from public folder
 
 // user middleware
 app.use(session({
-    secret: process.env.SECRET,
+    // secret: process.env.SECRET,
+    secret: 'secretidhere',
     store: MongoStore.create({mongoUrl: process.env.MONGODB_URI}),
     saveUninitialized: true,
     resave: false
