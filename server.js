@@ -23,15 +23,26 @@ app.use(morgan("tiny")) // logging
 app.use(methodOverride("_method")) // override for puts and deletes
 app.use(express.urlencoded({extended: true})) // parse request body
 app.use(express.static("public")) // serve files statically from public folder
+
+
+// user middleware
 app.use(session({
     secret: process.env.SECRET,
     store: MongoStore.create({mongoUrl: process.env.MONGODB_URI}),
     saveUninitialized: true,
     resave: false
 }))
+
+// routers
 app.use("/items", ItemRouter)
 app.use("/user", UserRouter)
 
+
+//more middleware
+app.use(express.static('public'));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(methodOverride('_method'));
 
 ////////////////////////////////////////////
 // Initial Route
