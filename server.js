@@ -43,9 +43,9 @@ app.get("/", (req, res) => {
 /////////////////////////////////////////////
 // Server Listener
 /////////////////////////////////////////////
-// const PORT = process.env.PORT
-// app.listen(PORT, () => console.log(`listening on ${PORT}`))
+const PORT = process.env.PORT
+app.listen(PORT, () => console.log(`listening on ${PORT}`))
 
-app.listen(process.env.PORT || 3000, function(){
-    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-  });
+// app.listen(process.env.PORT || 3000, function(){
+//     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+//   });

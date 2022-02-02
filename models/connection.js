@@ -8,14 +8,14 @@ const mongoose = require("mongoose")
 // Establish Database Connection
 ///////////////////////////////
 // "process" is part of node
-const DATABASE_URL = process.env.DATABASE_URL
+const MONGODB_URI = process.env.MONGODB_URI
 const CONFIG = {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }
 
 // Establish connection
-mongoose.connect(DATABASE_URL, CONFIG)
+mongoose.connect(MONGODB_URI, CONFIG)
 
 mongoose.connection
 .on("open", () => console.log("Connected to Mongo"))
